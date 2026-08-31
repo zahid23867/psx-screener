@@ -1,0 +1,68 @@
+export interface KseStock {
+  symbol: string;
+  name: string;
+  sector: string;
+  basePrice: number; // reference price (PKR) used to seed the simulation
+}
+
+// A representative slice of KSE-100 index constituents across major sectors.
+// Base prices are approximate reference points used to seed realistic simulated
+// price action (see lib/marketSim.ts) - NOT a live quote.
+export const KSE100: KseStock[] = [
+  { symbol: "OGDC", name: "Oil & Gas Development Co.", sector: "E&P", basePrice: 145 },
+  { symbol: "PPL", name: "Pakistan Petroleum Ltd.", sector: "E&P", basePrice: 165 },
+  { symbol: "POL", name: "Pakistan Oilfields Ltd.", sector: "E&P", basePrice: 520 },
+  { symbol: "MARI", name: "Mari Petroleum Co.", sector: "E&P", basePrice: 3400 },
+  { symbol: "PSO", name: "Pakistan State Oil", sector: "Oil Marketing", basePrice: 310 },
+  { symbol: "SNGP", name: "Sui Northern Gas Pipelines", sector: "Gas", basePrice: 95 },
+  { symbol: "SSGC", name: "Sui Southern Gas Co.", sector: "Gas", basePrice: 38 },
+  { symbol: "ATRL", name: "Attock Refinery Ltd.", sector: "Refinery", basePrice: 420 },
+  { symbol: "NRL", name: "National Refinery Ltd.", sector: "Refinery", basePrice: 610 },
+  { symbol: "PRL", name: "Pakistan Refinery Ltd.", sector: "Refinery", basePrice: 48 },
+  { symbol: "HBL", name: "Habib Bank Ltd.", sector: "Banking", basePrice: 195 },
+  { symbol: "UBL", name: "United Bank Ltd.", sector: "Banking", basePrice: 320 },
+  { symbol: "MCB", name: "MCB Bank Ltd.", sector: "Banking", basePrice: 275 },
+  { symbol: "MEBL", name: "Meezan Bank Ltd.", sector: "Banking", basePrice: 290 },
+  { symbol: "NBP", name: "National Bank of Pakistan", sector: "Banking", basePrice: 68 },
+  { symbol: "ABL", name: "Allied Bank Ltd.", sector: "Banking", basePrice: 145 },
+  { symbol: "BAFL", name: "Bank Alfalah Ltd.", sector: "Banking", basePrice: 78 },
+  { symbol: "BAHL", name: "Bank Al Habib Ltd.", sector: "Banking", basePrice: 105 },
+  { symbol: "AKBL", name: "Askari Bank Ltd.", sector: "Banking", basePrice: 42 },
+  { symbol: "BOP", name: "The Bank of Punjab", sector: "Banking", basePrice: 14 },
+  { symbol: "FABL", name: "Faysal Bank Ltd.", sector: "Banking", basePrice: 55 },
+  { symbol: "LUCK", name: "Lucky Cement Ltd.", sector: "Cement", basePrice: 980 },
+  { symbol: "DGKC", name: "D.G. Khan Cement Co.", sector: "Cement", basePrice: 135 },
+  { symbol: "MLCF", name: "Maple Leaf Cement Factory", sector: "Cement", basePrice: 58 },
+  { symbol: "FCCL", name: "Fauji Cement Company Ltd.", sector: "Cement", basePrice: 34 },
+  { symbol: "CHCC", name: "Cherat Cement Co.", sector: "Cement", basePrice: 210 },
+  { symbol: "PIOC", name: "Pioneer Cement Ltd.", sector: "Cement", basePrice: 175 },
+  { symbol: "KOHC", name: "Kohat Cement Co.", sector: "Cement", basePrice: 320 },
+  { symbol: "ENGRO", name: "Engro Corporation", sector: "Chemicals/Conglomerate", basePrice: 330 },
+  { symbol: "EFERT", name: "Engro Fertilizers Ltd.", sector: "Fertilizer", basePrice: 145 },
+  { symbol: "FFC", name: "Fauji Fertilizer Co.", sector: "Fertilizer", basePrice: 145 },
+  { symbol: "EPCL", name: "Engro Polymer & Chemicals", sector: "Chemicals", basePrice: 42 },
+  { symbol: "ICI", name: "ICI Pakistan Ltd.", sector: "Chemicals", basePrice: 960 },
+  { symbol: "LOTCHEM", name: "Lotte Chemical Pakistan", sector: "Chemicals", basePrice: 19 },
+  { symbol: "HUBC", name: "Hub Power Company", sector: "Power", basePrice: 145 },
+  { symbol: "KEL", name: "K-Electric Ltd.", sector: "Power", basePrice: 5.2 },
+  { symbol: "NPL", name: "Nishat Power Ltd.", sector: "Power", basePrice: 38 },
+  { symbol: "INDU", name: "Indus Motor Co.", sector: "Automobile", basePrice: 1750 },
+  { symbol: "HCAR", name: "Honda Atlas Cars", sector: "Automobile", basePrice: 320 },
+  { symbol: "PSMC", name: "Pak Suzuki Motor Co.", sector: "Automobile", basePrice: 480 },
+  { symbol: "MTL", name: "Millat Tractors Ltd.", sector: "Automobile", basePrice: 850 },
+  { symbol: "SYS", name: "Systems Ltd.", sector: "Technology", basePrice: 480 },
+  { symbol: "TRG", name: "TRG Pakistan Ltd.", sector: "Technology", basePrice: 105 },
+  { symbol: "NETSOL", name: "NetSol Technologies", sector: "Technology", basePrice: 165 },
+  { symbol: "AVN", name: "Avanceon Ltd.", sector: "Technology", basePrice: 78 },
+  { symbol: "PTC", name: "Pakistan Telecommunication Co.", sector: "Telecom", basePrice: 16 },
+  { symbol: "WTL", name: "WorldCall Telecom Ltd.", sector: "Telecom", basePrice: 1.8 },
+  { symbol: "SEARL", name: "The Searle Company Ltd.", sector: "Pharma", basePrice: 105 },
+  { symbol: "HINOON", name: "Highnoon Laboratories", sector: "Pharma", basePrice: 720 },
+  { symbol: "ABOT", name: "Abbott Laboratories Pakistan", sector: "Pharma", basePrice: 480 },
+  { symbol: "GLAXO", name: "GlaxoSmithKline Pakistan", sector: "Pharma", basePrice: 210 },
+  { symbol: "NML", name: "Nishat Mills Ltd.", sector: "Textile", basePrice: 105 },
+  { symbol: "GATM", name: "Gul Ahmed Textile Mills", sector: "Textile", basePrice: 42 },
+  { symbol: "PIBTL", name: "Pakistan International Bulk Terminal", sector: "Logistics", basePrice: 9.5 },
+  { symbol: "TPLP", name: "TPL Properties Ltd.", sector: "Real Estate", basePrice: 14 },
+  { symbol: "JSCL", name: "JS Bank Ltd.", sector: "Banking", basePrice: 14.5 },
+];
